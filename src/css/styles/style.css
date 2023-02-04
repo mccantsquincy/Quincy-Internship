@@ -13206,7 +13206,7 @@ a.read_more i {
 .nft_wrap {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 162px;
   overflow: hidden;
   border-radius: 10px 10px 0 0;
   -moz-border-radius: 10px 10px 0 0;
@@ -16713,4 +16713,101 @@ img {
 
 .no-cursor {
   cursor: not-allowed;
+}
+
+/* ----------------------------------------------------- */
+/* HOT COLLECTION CAROUSEL CARD & SKELETON LOADING STATE*/
+/* ----------------------------------------------------- */
+
+.nft_coll {
+  margin: 5px !important;
+}
+
+.img-fluid {
+  width: 119% !important;
+}
+
+button.slick-arrow.slick-prev {
+  z-index: 10;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+  opacity: 0.95 !important;
+  font-size: 43px !important;
+}
+
+.slick-next:before {
+  margin-left: -52px !important;
+}
+
+.slick-prev:before {
+  margin-left: 15px !important;
+}
+
+.skeleton__nft-img,
+.skeleton__author-img,
+.skeleton__txt-1,
+.skeleton__txt-2 {
+  background: linear-gradient(90deg, rgba(204,204,204,0.8758096988795518) 0%, rgba(195,195,195,1) 10%, rgba(219,216,216,0.9402354691876751) 58%, rgba(224,224,224,1) 100%);
+}
+
+.skeleton__nft-img {
+  height: 164px;
+}
+
+.skeleton__author-img {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+  z-index: 0;
+}
+
+.fa-check {
+  z-index: 1;
+}
+.skeleton__txt-1 {
+  height: 25px;
+  width: 104px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 10px auto;
+}
+
+.skeleton__txt-2 {
+  height: 25px;
+  width: 70px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.skeleton__nft-img::after,
+.skeleton__author-img::after,
+.skeleton__txt-1::after,
+.skeleton__txt-2::after{
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, rgba(229,229,229,0.3) 0%, rgba(240,240,240,0.38) 9%, rgba(240,240,240,0.4) 66%, rgba(229,229,229,0.4) 100%);
+  -webkit-animation: shimmer 2s infinite;
+  animation: shimmer 2s infinite;
+  content: "";
+}
+@-webkit-keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
 }
