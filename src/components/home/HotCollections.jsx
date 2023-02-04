@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 
 import Slider from "react-slick";
 
-// import AuthorImage from "../../images/author_thumbnail.jpg";
-// import nftImage from "../../images/nftImage.jpg";
-
 const HotCollections = () => {
   const [collection, setCollection] = useState([]);
   const [loadingState, setLoadingState] = useState(true);
