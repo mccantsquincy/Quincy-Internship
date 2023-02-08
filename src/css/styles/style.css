@@ -16908,3 +16908,74 @@ button.slick-arrow.slick-prev {
   top: 18px;
   left: 20px;
 }
+
+/* ----------------------------------------------------- */
+/* TOP SELLERS FEATURE & SKELETON LOADING STATE*/
+/* ----------------------------------------------------- */
+
+.top__sellers__skeleton-1,
+.top__sellers__skeleton-2,
+.top__sellers__skeleton-3 {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgba(204, 204, 204, 0.8758096988795518) 0%,
+    rgba(195, 195, 195, 1) 10%,
+    rgba(219, 216, 216, 0.9402354691876751) 58%,
+    rgba(224, 224, 224, 1) 100%
+  );
+}
+
+.top__sellers__skeleton-1 {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.top__sellers__skeleton-2 {
+  height: 20px;
+  width: 90px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+
+.top__sellers__skeleton-3 {
+  height: 20px;
+  width: 60px;
+  border-radius: 3px;
+}
+
+.top__sellers__skeleton-1::after,
+.top__sellers__skeleton-2::after,
+.top__sellers__skeleton-3::after {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    rgba(229, 229, 229, 0.3) 0%,
+    rgba(240, 240, 240, 0.38) 9%,
+    rgba(240, 240, 240, 0.4) 66%,
+    rgba(229, 229, 229, 0.4) 100%
+  );
+  -webkit-animation: shimmer 2s infinite;
+  animation: shimmer 2s infinite;
+  content: "";
+}
+@-webkit-keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
