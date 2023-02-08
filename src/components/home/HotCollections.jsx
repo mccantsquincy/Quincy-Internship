@@ -13,13 +13,11 @@ const HotCollections = () => {
     const { data } = await axios.get(
       "https://us-central1-nft-cloud-functions.cloudfunctions.net/hotCollections"
     );
-    console.log(data);
     setCollection(data);
   }
 
   useEffect(() => {
     getHotCollection();
-
     setTimeout(() => {
       setLoadingState(false);
     }, 3000);
@@ -70,7 +68,6 @@ const HotCollections = () => {
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
-
           {loadingState ? (
             <div>
               <Slider {...settings}>
