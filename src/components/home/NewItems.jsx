@@ -62,14 +62,18 @@ const NewItems = () => {
   return (
     <section id="section-items" className="no-bottom">
       <div className="container">
-        <div className="row">
+        <div
+          className="row"
+          data-aos="fade-in"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
           <div className="col-lg-12">
             <div className="text-center">
               <h2>New Items</h2>
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
-
           {loading ? (
             <Slider {...settings}>
               {new Array(4).fill(0).map((_, index) => (
@@ -112,7 +116,7 @@ const NewItems = () => {
                       </Link>
                     </div>
                     {item.expiryDate ? (
-                      <CountDownTimer expiryDate={item.expiryDate}/>
+                      <CountDownTimer expiryDate={item.expiryDate} />
                     ) : null}
                     <div className="nft__item_wrap">
                       <Link to={`/item-details/${item.nftId}`}>

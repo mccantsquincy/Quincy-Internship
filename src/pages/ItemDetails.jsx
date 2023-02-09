@@ -30,7 +30,12 @@ const ItemDetails = () => {
       <div className="no-bottom no-top" id="content">
         <div id="top"></div>
         <section aria-label="section" className="mt90 sm-mt-0">
-          <div className="container">
+          <div
+            className="container"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
             {loading ? (
               <div className="row mobile">
                 <div className="col-md-6 text-center">

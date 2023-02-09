@@ -11,7 +11,7 @@ const Author = () => {
   const [author, setAuthor] = useState([]);
   const [nftCollection, setNftCollection] = useState([]);
   const [follow, setFollow] = useState(true);
-  const [followerCount, setFollowerCount] = useState([])
+  const [followerCount, setFollowerCount] = useState([]);
 
   async function getAuthors() {
     const { data } = await axios.get(
@@ -19,7 +19,7 @@ const Author = () => {
     );
     setAuthor(data);
     setNftCollection(data.nftCollection);
-    setFollowerCount(data.followers)
+    setFollowerCount(data.followers);
   }
 
   useEffect(() => {
@@ -28,13 +28,13 @@ const Author = () => {
   }, []);
 
   const followFunction = () => {
-    setFollow(false)
-    setFollowerCount(followerCount + 1)
+    setFollow(false);
+    setFollowerCount(followerCount + 1);
   };
 
   const unfollowFunction = () => {
-    setFollow(true)
-    setFollowerCount(followerCount - 1)
+    setFollow(true);
+    setFollowerCount(followerCount - 1);
   };
 
   return (
@@ -51,7 +51,12 @@ const Author = () => {
         ></section>
         <section aria-label="section">
           <div className="container">
-            <div className="row">
+            <div
+              className="row"
+              data-aos="fade-in"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
               <div className="col-md-12">
                 <div className="d_profile de-flex">
                   <div className="de-flex-col">
@@ -61,7 +66,9 @@ const Author = () => {
                       <div className="profile_name">
                         <h4>
                           {author.authorName}
-                          <span className="profile_username">@{author.tag}</span>
+                          <span className="profile_username">
+                            @{author.tag}
+                          </span>
                           <span id="wallet" className="profile_wallet">
                             {author.address}
                           </span>
@@ -76,11 +83,19 @@ const Author = () => {
                     <div className="de-flex-col">
                       <div className="profile_follower">{followerCount}</div>
                       {follow ? (
-                        <Link to="#" className="btn-main" onClick={followFunction}>
+                        <Link
+                          to="#"
+                          className="btn-main"
+                          onClick={followFunction}
+                        >
                           Follow
                         </Link>
                       ) : (
-                        <Link to="#" className="btn-main" onClick={unfollowFunction}>
+                        <Link
+                          to="#"
+                          className="btn-main"
+                          onClick={unfollowFunction}
+                        >
                           Unfollow
                         </Link>
                       )}

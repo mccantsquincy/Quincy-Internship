@@ -16509,6 +16509,19 @@ img {
 }
 
 /* -------------------------------------------------- 
+    custom for 575px 
+    /* -------------------------------------------------- */
+
+/* NEW ITEMS NFT IMAGE */
+
+@media only screen and (max-width: 575px) {
+  .nft__item img {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+/* -------------------------------------------------- 
     design for 480px
     /* -------------------------------------------------- */
 
@@ -17066,7 +17079,7 @@ button.slick-arrow.slick-prev {
     max-width: 102%;
     height: 390px;
   }
-}  
+}
 
 @media only screen and (max-width: 450px) {
   .item__details__skeleton-2 {
