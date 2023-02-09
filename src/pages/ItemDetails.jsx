@@ -32,7 +32,7 @@ const ItemDetails = () => {
         <section aria-label="section" className="mt90 sm-mt-0">
           <div className="container">
             {loading ? (
-              <div className="row">
+              <div className="row mobile">
                 <div className="col-md-6 text-center">
                   <div className="item__details__skeleton-1"></div>
                 </div>

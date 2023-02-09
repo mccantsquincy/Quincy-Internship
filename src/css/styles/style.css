@@ -17060,3 +17060,24 @@ button.slick-arrow.slick-prev {
     transform: translateX(100%);
   }
 }
+
+@media only screen and (max-width: 780px) {
+  .item__details__skeleton-2 {
+    max-width: 102%;
+    height: 390px;
+  }
+}  
+
+@media only screen and (max-width: 450px) {
+  .item__details__skeleton-2 {
+    max-width: 102%;
+    height: 270px;
+  }
+}
+
+/* @media only screen and (max-width: 450px) {
+  .item__details__skeleton-2 {
+    max-width: 102%;
+    height: 250px;
+  }
+} */
